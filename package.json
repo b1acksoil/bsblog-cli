@@ -1,18 +1,35 @@
 {
   "name": "@b1acksoil/bsblog-cli",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "release": "tsc && npm publish"
   },
   "bin": {
-    "bsblog": "./build/src/cli.js"
+    "bsblog": "build/cli.js"
   },
   "files": [
-    "./build",
-    "./package.json",
-    "./tsconfig.json"
+    "build",
+    "package.json"
   ],
+  "author": {
+    "name": "b1acksoil",
+    "email": "bs@blacksoil.top",
+    "url": "https://github.com/b1acksoil"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b1acksoil/bsblog-cli.git"
+  },
+  "keywords": [
+    "bsblog",
+    "cli"
+  ],
+  "homepage": "https://github.com/b1acksoil/bsblog-cli#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "commander": "^9.2.0",
     "inquirer": "^8.2.4"

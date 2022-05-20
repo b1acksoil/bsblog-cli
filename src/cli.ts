@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import { program } from 'commander'
-import { version } from '../package.json'
 import enableInit from './commands/init'
 import enableNew from './commands/new'
+const { version } = require('../package.json')
 
 program
   .name('bsblog')
