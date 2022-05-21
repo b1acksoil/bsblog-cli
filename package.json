@@ -1,6 +1,6 @@
 {
   "name": "@b1acksoil/bsblog-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "commander": "^9.2.0",
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "yaml": "^2.1.0"
   },
   "devDependencies": {
     "@types/inquirer": "^8.2.1",

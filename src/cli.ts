@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { program } from 'commander'
-import enableInit from './commands/init'
+import enableGenerate from './commands/generate'
 import enableNew from './commands/new'
 const { version } = require('../package.json')
 
@@ -10,7 +10,7 @@ program
   .version(version, '-v, --version')
   .enablePositionalOptions()
 
-enableInit(program)
 enableNew(program)
+enableGenerate(program)
 
 program.parse(process.argv)
