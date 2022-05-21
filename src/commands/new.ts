@@ -45,9 +45,9 @@ export default function enableNew(program: Command) {
           YAML.stringify({
             id,
             title,
+            create,
             categories,
             tags,
-            create
           }) +
           '---\n'
         )

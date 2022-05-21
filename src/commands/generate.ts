@@ -24,7 +24,7 @@ export default function enableGenerate(program: Command) {
       }
       fs.writeFileSync('index.json', JSON.stringify({
         articles
-      }))
+      }, null, 2))
 
       console.log('Generation done.')
     })
