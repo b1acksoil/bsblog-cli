@@ -23,6 +23,11 @@ export default function enableNew(program: Command) {
         },
         {
           type: 'input',
+          name: 'description',
+          message: 'Description:',
+        },
+        {
+          type: 'input',
           name: 'categories',
           message: 'Categories (Use \',\' to split):',
         },
@@ -34,6 +39,7 @@ export default function enableNew(program: Command) {
       ]).then((answer) => {
         const id: string = answer.id
         const title: string = answer.title
+        const description: string = answer.description
         const categories: string[] = answer.categories.trim() === '' ? [] : answer.categories.split(',')
         const tags: string[] = answer.tags.trim() === '' ? [] : answer.tags.split(',')
         const create: number = Date.now()
@@ -48,6 +54,7 @@ export default function enableNew(program: Command) {
             create,
             categories,
             tags,
+            description,
           }) +
           '---\n'
         )
